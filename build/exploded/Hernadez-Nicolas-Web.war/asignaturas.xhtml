@@ -15,19 +15,19 @@
             </f:facet>
             <h:panelGrid columns="3">
                 <p:outputLabel for="txfCodigo" value="Codigo : " />
-                <p:inputText id="txfCodigo"/>
+                <p:inputText id="txfCodigo" placeholder="Codigo"/>
                 <p:message for="txfCodigo"/>
                 
                 <p:outputLabel for="txfNombre" value="Nombre : "/>
-                <p:inputText id="txfNombre"/>
+                <p:inputText id="txfNombre" placeholder="Nombre"/>
                 <p:message for="txfNombre"/>
                 
                 <p:outputLabel for="txfCreditos" value="Creditos : "/>
-                <p:inputNumber id="txfCreditos"/>
+                <p:inputNumber id="txfCreditos" placeholder="Creditos"/>
                 <p:message for="txfCreditos"/>
                 
                 <p:outputLabel for="txfIntensidad" value="Intensidad : "/>
-                <p:inputNumber id="txfIntensidad"/>
+                <p:inputNumber id="txfIntensidad" placeholder="Intensidad"/>
                 <p:message for="txfIntensidad"/>
                 
                 
@@ -39,6 +39,24 @@
                                  style="margin-left: .5em"/>
             </f:facet>
         </p:card>
+        <div class="card">
+            <p:dataTable>
+                <f:facet name="header"> Asignaturas</f:facet>
+                <p:column headerText="Codigo">
+                    
+                </p:column>
+                <p:column headerText="Nombre">
+                    
+                </p:column>
+                <p:column headerText="Creditos">
+                    
+                </p:column>
+                <p:column headerText="Intensidad">
+                    
+                </p:column>
+            </p:dataTable>
+            
+        </div>
     </h:body>
 </html>
 
