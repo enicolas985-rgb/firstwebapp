@@ -15,7 +15,7 @@
             </f:facet>
             <h:panelGrid columns="3">
                 <p:outputLabel for="txfCodigo" value="Codigo : " />
-                <p:inputText id="txfCodigo" placeholder="Codigo"/>
+                <p:inputText id="txfCodigo" placeholder="Codigo" value="#{ctrlAsignaturas.asignatura.codigo}"/>
                 <p:message for="txfCodigo"/>
                 
                 <p:outputLabel for="txfNombre" value="Nombre : "/>
@@ -55,7 +55,6 @@
                     
                 </p:column>
             </p:dataTable>
-            
         </div>
     </h:body>
 </html>
