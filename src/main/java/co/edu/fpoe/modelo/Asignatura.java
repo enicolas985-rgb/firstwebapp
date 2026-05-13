@@ -4,6 +4,7 @@
  */
 package co.edu.fpoe.modelo;
 
+
 /**
  *
  * @author Sala Sistemas
@@ -13,6 +14,7 @@ public class Asignatura {
     private String nombre;
     private byte creditos;
     private byte intensidad;
+    public Asignatura(){}
 
     public Asignatura(int codigo, String nombre, byte creditos, byte intensidad) {
         this.codigo = codigo;
