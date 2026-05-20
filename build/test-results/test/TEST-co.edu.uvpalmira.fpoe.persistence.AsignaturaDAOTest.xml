@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.edu.uvpalmira.fpoe.persistence.AsignaturaDAOTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-05-20T22:32:19" hostname="PAL-53989654" time="1.617">
+  <properties/>
+  <testcase name="testBuscarPorEscuela" classname="co.edu.uvpalmira.fpoe.persistence.AsignaturaDAOTest" time="1.56"/>
+  <testcase name="testBuscarPorCodigo" classname="co.edu.uvpalmira.fpoe.persistence.AsignaturaDAOTest" time="0.056"/>
+  <system-out><![CDATA[[EL Info]: 2026-05-20 17:32:20.657--ServerSession(1042772649)--EclipseLink, version: Eclipse Persistence Services - 4.0.8.v202509250753-f4449e70fdbe80ebeabd5e04bd3ad95033bf75b6
+insertar
+1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
