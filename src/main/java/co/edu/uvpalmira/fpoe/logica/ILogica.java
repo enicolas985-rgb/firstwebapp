@@ -17,7 +17,7 @@ import java.util.List;
 public interface ILogica {
     public void crearAsignatura(Asignatura asignatura)throws SQLIntegrityConstraintViolationException, Exception;
     public void modificarAsignatura(Asignatura asignatura) throws SQLIntegrityConstraintViolationException, Exception;
-    public Asignatura buscarAsignatura(Asignatura asignatura);
+    public Asignatura buscarAsignatura(String codigo);
     public List<Asignatura> buscarAsignaturas();
     
 }

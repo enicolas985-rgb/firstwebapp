@@ -36,7 +36,7 @@ public class LogicaImplementacion implements ILogica{
     
     
     @Override
-    public void crearAsignatura(Asignatura asignatura) throws SQLIntegrityConstraintViolationException, Exception{
+    public void crearAsignatura(Asignatura asignatura) throws SQLIntegrityConstraintViolationException , Exception{
         this.asignaturaDAO.create(asignatura);
     }
 
