@@ -12,10 +12,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -57,8 +57,16 @@ public class AsignaturaDAOTest {
             asignaturaDAO.create(asig);
             this.id = asig.getId();
             System.out.println(this.id);
+            String codigo = asig.getCodigo();
+            asig = null;
+            Assert.assertNotNull(this.id);
+            
+            System.out.println("Buscar : " + this.id);
+            asig= this.asignaturaDAO.buscarPorCodigo(codigo);
+            Assert.assertEquals("750014C",codigo);
         } catch (Exception ex) {
             Logger.getLogger(AsignaturaDAOTest.class.getName()).log(Level.SEVERE, null, ex);
+        Assert.fail();
         }
         
         
@@ -70,7 +78,48 @@ public class AsignaturaDAOTest {
      */
     @Test
     public void testBuscarPorEscuela() {
-        
+        try {
+            System.out.println("Insertar asignaturas");
+            
+            Asignatura a1 =
+                    new Asignatura("750001C",
+                            "Matematicas",
+                            (byte) 4,
+                            (byte) 4);
+            
+            Asignatura a2 =
+                    new Asignatura("750002C",
+                            "Programacion",
+                            (byte) 3,
+                            (byte) 3);
+            
+            Asignatura a3 =
+                    new Asignatura("760001C",
+                            "Circuitos",
+                            (byte) 3,
+                            (byte) 2);
+            
+            this.asignaturaDAO.create(a1);
+            this.asignaturaDAO.create(a2);
+            this.asignaturaDAO.create(a3);
+            
+            System.out.println("buscar por escuela : 750 ");
+            List<Asignatura> lista = this.asignaturaDAO.buscarPorEscuela("750%");
+
+            Assert.assertNotNull(lista);
+
+            Assert.assertEquals(2, lista.size());
+
+            Assert.assertEquals("750001C",
+                    lista.get(0).getCodigo());
+
+            Assert.assertEquals("750002C",
+                    lista.get(1).getCodigo());
+        } catch (Exception ex) {
+            Logger.getLogger(AsignaturaDAOTest.class.getName()).log(Level.SEVERE, null, ex);
+            Assert.fail();
+        }
+
     }
     
 }

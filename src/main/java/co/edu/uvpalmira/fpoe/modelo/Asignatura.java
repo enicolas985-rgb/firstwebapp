@@ -56,6 +56,9 @@ public class Asignatura extends AbstractEntity{
     public short getIntensidad() {
         return intensidad;
     }
+    public String getEscuela(){
+        return codigo.substring(0, 3);
+    }
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
