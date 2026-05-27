@@ -64,6 +64,15 @@ public class AsignaturaDAOTest {
             System.out.println("Buscar : " + this.id);
             asig= this.asignaturaDAO.buscarPorCodigo(codigo);
             Assert.assertEquals("750014C",codigo);
+            
+            System.out.println("Actualizar");
+            asig.setNombre("Fundamentos de Programacion");
+            this.asignaturaDAO.edit(asig);
+            asig = null;
+            asig = this.asignaturaDAO.buscarPorCodigo(codigo);
+            Assert.assertEquals("Fundamentos de Programacion",asig.getNombre()
+            );
+            
         } catch (Exception ex) {
             Logger.getLogger(AsignaturaDAOTest.class.getName()).log(Level.SEVERE, null, ex);
         Assert.fail();
