@@ -13,6 +13,7 @@
             <f:facet name="title">
                 Gestionar asignaturas
             </f:facet>
+            <h:form>
             <h:panelGrid columns="3">
                 <p:outputLabel for="txfCodigo" value="Codigo : " />
                 <p:inputText id="txfCodigo" placeholder="Codigo" value="#{ctrlAsignaturas.asignatura.codigo}"/>
@@ -32,12 +33,20 @@
                 
                 
             </h:panelGrid>
+            </h:form>
             <f:facet name="footer">
-                <p:commandButton icon="pi pi-check" value="save"/>
+                <p:commandButton icon="pi pi-check" value="save"
+                                 action=""
+                                 process=""
+                                 update=""/>
                 <p:commandButton icon="pi pi-times" value="cancel"
                                  styleClass="ui-button-secondary"
-                                 style="margin-left: .5em"/>
+                                 style="margin-left: .5em"
+                                 action="#{ctrlAsignaturas.cancelar()}"
+                                 process="@this"
+                                 update=""/>
             </f:facet>
+            <p:messages id="mensajes" globalOnly="true" closable="true"/>
         </p:card>
         <div class="card">
             <p:dataTable>

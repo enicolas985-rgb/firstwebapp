@@ -46,6 +46,9 @@ public class ControladorAsignatura implements Serializable{
             Logger.getLogger(ControladorAsignatura.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    public void cancelar (){
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Proceso cancelado"));
+    }
     
     
 }
